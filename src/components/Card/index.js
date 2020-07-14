@@ -25,13 +25,14 @@ class Card extends React.Component{
         }
     }
     render(){
+        const {item} = this.props
         return(
             <div>
             <p className={this.state.color}>{this.state.like}</p>
             <button onClick={() => this.handleClick()}>Darle like</button>
-            <img src={this.props.item.img}/>
-            <p>Title: {this.props.item.title}</p>
-            <p>Precio: ${this.props.item.price} </p>
+            <img src={item.img}/>
+            <p>Title: {item.title}</p>
+            <p>Precio: ${item.price} </p>
         </div>
         )
     }
