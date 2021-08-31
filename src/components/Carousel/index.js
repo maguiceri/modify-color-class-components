@@ -1,12 +1,12 @@
 import React from 'react';
 import Title from '../Title';
 import InnerCarousel from '../InnerCarousel';
-import './style.css';
+import './style.scss';
 
 class Carousel extends React.Component {
     render(){
         return(
-            <div>
+            <div className="carousel">
                 <Title content={this.props.title}/>
                 <InnerCarousel items={this.props.items}/>
                 

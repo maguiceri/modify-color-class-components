@@ -1,10 +1,10 @@
 import React from 'react';
-import './style.css';
+import './style.scss';
 
 class Title extends React.Component {
     render(){
         return(
-            <span>{this.props.content}</span>
+            <span className="title">{this.props.content}</span>
         )
     }
 }

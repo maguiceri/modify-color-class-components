@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './style.scss';
 
 class Card extends React.Component{
     constructor (props) {
@@ -27,13 +27,15 @@ class Card extends React.Component{
     render(){
         const {item} = this.props
         return(
-            <div>
-            <p className={this.state.color}>{this.state.like}</p>
-            <button onClick={() => this.handleClick()}>Darle like</button>
-            <img src={item.img}/>
-            <p>Title: {item.title}</p>
-            <p>Precio: ${item.price} </p>
-        </div>
+            <div className="info">
+                    <img className="img" src={item.img}/>
+                    <p className="card-title">Title: {item.title}</p>
+                    <p className="price">Precio: ${item.price} </p>
+                    <div className="like">
+                        <p className={this.state.color}>{this.state.like}</p>
+                        <button className="button" onClick={() => this.handleClick()}>Like</button>
+                    </div>
+            </div>
         )
     }
 }
